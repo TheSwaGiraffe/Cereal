@@ -1,0 +1,10 @@
+services:
+  - type: static_site
+    name: CerealGames
+    env: static
+    buildCommand: ''
+    publishDirectory: ./public
+    routes:
+      - from: '/:file'
+        to: '/:file.html'
+        status: 301
