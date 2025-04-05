@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="top-nav">
+        <b><h1>CerealGames</h1></b>
+        <b><h1>Stacktris</h1></b>
+        <a href="index.ht ml"><h2>Home</h2></a>
+        <div class="dropdown">
+            <button>2 Player</button>
+            <div class="dropdown-content">
+                <a href="basketRandom">Basket Random</a>
+                <a href="soccerRandom">Soccer Random</a>
+                <a href="boxingRandom">Boxing Random</a>
+                <a href="tag">Tag</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Strategy</button>
+            <div class="dropdown-content">
+                <a href="dinoBros">Dino Bros</a>
+                <a href="masterChess">Master Chess</a>
+                <a href="cosmosLines">Cosmos Lines</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Papa's Games</button>
+            <div class="dropdown-content">
+                <a href="pizzeria">Papa's Pizzeria</a>
+                <a href="freezeria">Papa's Freezeria</a>
+                <a href="pastaria">Papa's Pastaria</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>Minecraft</button>
+            <div class="dropdown-content">
+                <a href="eag1">Minecraft 1.8.8 (reccomended)</a>
+                <a href="eag2">Minecraft 1.5.2 (reccomended)</a>
+                <a href="eag3">Minecraft 1.12.2 (VERY LAGGY)</a>
+                <a href="eag4">Minecraft Beta 1.7.3</a>
+                <a href="eag5">Minecraft Beta 1.3</a>
+                <a href="eag6">Minecraft Alpha 1.26</a>
+                <a href="eag7">Minecraft Indev</a>
+                <a href="eag8">Minecraft 0.30 Classic</a>
+            </div>
+        </div>
+    </div>
+    <iframe class="game-iframe" id="game-area" src="https://abinbins.github.io/a3/tag" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
+        <button id="fullscreen-btn">
+            <img class="fullscreenBtn" src="fullscreen.png" alt="fullscreen">
+        </button>
+    <script>
+        const iframe = document.getElementById("game-area");
+        const fullscreenBtn = document.getElementById("fullscreen-btn");
+
+        fullscreenBtn.addEventListener("click", () => {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome and Safari
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
