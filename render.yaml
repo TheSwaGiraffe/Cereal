@@ -6,5 +6,5 @@ services:
     publishDirectory: ./public
     routes:
       - from: '/:file'
-        to: '/:file.html'
+        to: '/:file'
         status: 301
