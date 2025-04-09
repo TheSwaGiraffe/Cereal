@@ -33,6 +33,11 @@ p
 {
     text-align: center;
 }
+.center img
+{
+    width:15vw;
+    height:auto;
+}
 .game-iframe
 {
     border: none;
@@ -62,6 +67,8 @@ img.fullscreenBtn
 }
 .top-nav
 {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -108,4 +115,19 @@ img.fullscreenBtn
 
 .dropdown:hover button {
     background-color: #451f8b;
+}
+div.games
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 75vw;
+    margin: 5vh auto;
+}
+div.games img
+{
+    margin:1vw;
+    width:10vw;
+    height:10vw;
+    border-radius: 1.25vw;
 }
