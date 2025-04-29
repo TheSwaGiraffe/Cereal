@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4310225602487689"
-    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
     <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" type="image/x-icon">
@@ -10,6 +8,7 @@
 <body>
     <div class="top-nav">
         <a href="/"><b><h1>CerealGames</h1></b></a>
+        <b><h1>House Of Hazards</h1></b>
         <div class="dropdown">
             <button>2 Player</button>
             <div class="dropdown-content">
@@ -64,10 +63,26 @@
             </div>
         </div>
     </div>
-    <h1>Welcome to CerealGames!</h1><p> Click one of the catagories above to choose a game.</p>
-    <div class="center">
-        <img class alt="crap, your images wont load" src="https://cerealeagler.onrender.com/cereal.png">
-    </div>
+    <iframe class="game-iframe" id="game-area" src="https://houseofhazards.com/1.embed" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
+        <button id="fullscreen-btn">
+            <img class="fullscreenBtn" src="fullscreen.png" alt="fullscreen">
+        </button>
+    <script>
+        const iframe = document.getElementById("game-area");
+        const fullscreenBtn = document.getElementById("fullscreen-btn");
+
+        fullscreenBtn.addEventListener("click", () => {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome and Safari
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        });
+    </script>
     <div class ="games">
         <a href="driveMad"><img src="https://abinbins.github.io/thumb/drive-mad.png" alt="drive-mad"></a>
         <a href="stacktris"><img src="https://abinbins.github.io/thumb/stacktris.png" alt="stacktris"></a>
@@ -94,5 +109,4 @@
         <a href="masterChess"><img src="https://masterchessonline.github.io/images/logo.png" alt="master-chess"></a>
         <a href="template"><img src="https://static.vecteezy.com/system/resources/previews/002/592/172/non_2x/smile-emoji-pop-art-line-style-icon-free-vector.jpg" alt=":)"></a>
     </div>
-</body>
 </html>
